@@ -1,0 +1,46 @@
+/**
+ * Widgets
+ */
+
+	
+.widget {
+	
+	p,a {
+		font-size: 1.375rem;
+	}
+
+	.box {
+
+		@extend %extend-font;
+	}
+}
+
+.widget-area,
+.widget-area.brand {
+	padding: 20px;
+	@media screen and (min-width: $desktop) {
+		padding: 60px;
+	}
+}
+
+.widget_search {
+
+    input[type=search] {
+       border: 1px solid $brand_1; /* 2px white border */
+    }
+}
+
+.widget_nav_menu {
+	h2 {
+		color: $dark_grey;
+		font-size: 2.8em;
+		line-height: 1;
+		display: block;
+		padding: 2px 5px;
+		text-decoration: none;
+		text-align: left;
+		font-weight: $light;
+		padding-bottom: 20px;
+	}
+}
+

@@ -1,0 +1,87 @@
+/**
+ * 2.0 - Base / Variable etc
+ */
+
+/// Brand Guidelines
+
+/// Green
+$brand_1:			#98E7B3;
+
+/// Dark Blue
+$brand_2:			#002e3b;
+
+/// Black / White
+/// Pantone Black 5
+/// CMYK 100k
+/// RGB 35/31/32
+$black:		#231120;
+$white:		#fff;
+
+
+/// OTHER COLOURS
+$white_contrast:	#FaFaFa;	/// Off-white / Snow
+$white_contrast_2:	#f0f0f0;	/// Off-white / Snow
+$light_grey:		#BEBEBE;	///	Light Grey 1
+$courses_grey:		#F8F8F8;	///	Courses list boxes
+$mid_grey:			#D1D1D1;	/// Mid Grey
+$dark_grey:			#686868;	/// Dark Grey
+
+$grey_borders: 		#F2F2F2;
+
+
+/// Complimentary
+$cta: $brand_1;
+
+
+///
+$social:	$brand_1;
+$social_2:	$brand_2;
+
+
+$body_background: $white;
+
+$footer: 	$light_grey;
+$th:		$light_grey; /// For table headings
+$td:		$white; /// For table cells
+$td_2:		$white_contrast_2; /// for alternate rows
+
+$border_color: $brand_2;
+
+$placeholder_background: $light_grey; /// for placeholder boxes
+
+/// Screen Sizes
+$maxwidthwrapper: 1280px;
+$maxwidth: 1600px;
+$width1540: 1540px;
+$width1500: 1500px;
+$width1470: 1470px;
+$width1400: 1400px;
+$width1360: 1360px;
+$width1280: 1280px;
+$width1240: 1240px;
+$width1100: 1100px;
+$desktop: 1024px;
+$desktop_small: 992px;
+$kindle: 800px;
+$tablet: 768px;
+$mobile_sm: 614px;
+$mobile_smm: 575px;
+$mobile: 414px;
+
+/// Font Weights
+/// Standard
+$ultra_light:	200;
+$light:			300;
+$regular:		400;
+$medium:		500;
+$bold:			600;
+$extra_bold:	700;		
+
+/// Avenir
+///$f_av_light: 		300;
+///$f_av_reg:			400;
+///$f_av_med:			500;
+///$f_av_bold:			700;
+
+/// font widths
+$text_max_width:	768px;

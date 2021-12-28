@@ -1,0 +1,37 @@
+/**
+* This is the main stylesheet for the sass compiler, all imports should stem from this initial page.
+* It contains the universal styles of the site, the imports and various other items.
+*/
+// Colours and settings
+$siteWidth: 1280px;
+
+// Imports
+///@import '_normalise.scss';
+@import '_base.scss';
+@import '_mixins.scss';
+@import 'layout/_grid.scss';
+@import '_layout.scss';
+@import 'layout/_sections.scss';
+
+
+///// NOT USING THE REST ATM,....
+///@import 'layout/_menu.scss';
+///@import 'layout/_home.scss';
+
+///@import 'elements/_typography.scss';
+///@import 'elements/_forms.scss';
+///@import 'elements/_tables.scss';
+///@import 'elements/_widgets.scss';
+///@import 'elements/_product_search.scss';
+
+// This is a temp file for development only, put this last, you can use a class to output code in a div or iframe without showing it.
+@import '_development.scss';
+
+html, html * {
+    box-sizing: border-box; padding: 0; margin: 0;
+}
+
+// These are used to ensure the app runs full display
+html, body {
+    width: 100%; height: 100%;
+}

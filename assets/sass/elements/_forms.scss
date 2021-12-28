@@ -1,0 +1,108 @@
+/**
+ * Forms
+ */
+
+/* Fields */
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select, option,
+textarea {
+    display: block;
+    background-color: $light_grey; /* Remove background fill */
+    ///text-transform: uppercase; /* Make text all uppercase */
+    border: none;
+    color: $brand_1;
+    width: 100% !important;
+    padding: 10px;
+    margin-bottom: 10px;    
+
+}
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=email],
+input[type=month],
+input[type=number],
+input[type=password],
+input[type=range],
+input[type=search],
+input[type=tel],
+input[type=text],
+input[type=time],
+input[type=url],
+input[type=week],
+select, option {
+    
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:   $footer;
+    font-family: 'Source Sans Pro', open-sans, sans-serif;
+    font-size: 1.2em;
+    opacity: 1;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    $footer;
+    font-family: 'Source Sans Pro', open-sans, sans-serif;
+    font-size: 1.2em;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    $footer;
+    font-family: 'Source Sans Pro', open-sans, sans-serif;
+    font-size: 1.2em;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    $footer;
+    font-family: 'Source Sans Pro', open-sans, sans-serif;
+    font-size: 1.2em;
+    opacity: 1;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color:    $footer;
+    font-family: 'Source Sans Pro', open-sans, sans-serif;
+    font-size: 1.2em;
+    opacity: 1;
+}
+/* Button */
+input[type=submit],
+input[type=button],
+button[type=submit],
+.button {   
+    
+    float: right;
+    clear: both;
+    
+    padding: 10px;
+    color: $white;
+    float: right;
+    clear: both;
+
+    background: $brand_1;
+    text-decoration: none;
+    font-size: 1.375rem;
+    font-weight: $regular;
+    text-transform: uppercase;
+    @include transition(all 0.5s ease-in-out);
+    border: 1px solid transparent;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: $brand_1;
+        background: $white;
+        border: 1px solid $brand_1;
+    }
+}

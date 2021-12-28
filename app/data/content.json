@@ -1,0 +1,28 @@
+{
+  "pages": {
+    "home": {
+      "title": "BiteSize Php - a bespoke micro-framework",
+      "content": {
+        "meta_data" : {
+          "title" : "Bitesize Php | BiteSize Php - a bespoke micro-framework",
+          "description" : "A custom micro Php framework written by Andi Lee Davis"
+        },
+        "search_string": "A custom micro Php framework written by Andi Lee Davis",
+        "html": "<p>BiteSize Php is a custom micro Php framework written by Andi Lee Davis. It's a simple Php MVC framework devised to create a small website from a JSON file.</p><p>It is currently a little work in progress</p>"
+      },
+      "page_template": "default"      
+    },
+    "about": {
+      "title": "What is BiteSize Php?",
+      "content": {
+        "meta_data": {
+          "title": "What is BiteSize Php? | BiteSize PHP",
+          "description": "BiteSize PHP is custom/bespoke micro PHP Framework to get simple website pages up and running"
+        },
+        "search_string": "",
+        "html": "<p>BiteSize Php is a custom micro Php framework written by Andi Lee Davis. It's a simple Php MVC framework devised to create a small website from a JSON file.</p>"
+      },
+      "page_template": "default"
+    }
+  }
+}

@@ -1,0 +1,553 @@
+/**
+* This is the main stylesheet for the sass compiler, all imports should stem from this initial page.
+* It contains the universal styles of the site, the imports and various other items.
+*
+* Styles 
+	
+* grey: font/header background 		- #363636
+* blue: links etc 					- #4d7dff
+* orange:; big ctas					- phone
+*
+* 
+*/
+
+/**
+ * 2.0 - Base / Variable etc
+ */
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+
+}
+
+body {
+	font-size: 116%;
+	font-family: 'Roboto', sans-serif;
+	color: #363636;
+	background: #fafafa;
+	/*
+	background: url(/assets/img/backgrounds/house-1.svg) no-repeat;
+	background-size: contain;
+	background-position: right bottom;
+	*/
+}
+/**
+ * 2.0 - Mixins and Extensions
+ */
+/**
+ * Extensions
+*/
+.grid {
+	display: grid;
+}
+
+/**
+ * Development
+ */
+.development {
+  display: none !important;
+}
+
+/**
+ * 1.1 - General Page Layout
+ */
+.wp {
+	max-width: 1685px;
+	margin: 0 auto;
+	grid-template-rows: auto;
+	grid-template-columns: 1fr;
+	align-items: flex-start;
+	height: 100%;
+	grid-column-gap: 15px;
+	grid-row-gap: 15px;
+
+	grid-template-areas: "main-header" "main-body" "main-footer";
+	
+
+}
+
+header {
+	padding: 0;
+	
+}
+
+.wp>header {
+	background: #363636;
+	grid-area: main-header;
+	padding: 0;
+	grid-template-areas: "logo phone" "logo menu-toggle" "top-nav top-nav";
+	grid-template-columns: 180px 1fr;
+	grid-template-rows: 100px 56px auto;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+}
+
+.wp>header .main-nav {
+	-webkit-transition: transform 0.5s ease-in-out;
+	-moz-transition: transform 0.5s ease-in-out;
+	-o-transition: transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out;
+
+	transform: translateY(-500%);
+	opacity: 0;
+	height: 0;
+	visibility: hidden;
+	font-size: 0;
+
+}
+.wp>header .nav-menu {
+	-webkit-transition: transform 0.8s ease-in-out, opacity 1s ease-in;
+	-moz-transition: transform 0.8s ease-in-out, opacity 1s ease-in;
+	-o-transition: transform 0.8s ease-in-out, opacity 1s ease-in;
+	transition: transform 0.8s ease-in-out, opacity 1s ease-in;
+	transform: translateY(-600%);
+	opacity: 0;
+}
+
+main {
+	grid-area: main-body;
+	padding: 0 20px;
+	grid-column-gap: 60px;
+	grid-row-gap: 10px;
+	grid-template-areas: "entry-header" "entry-content" "entry-footer" "sidebar";
+	text-align: center;
+	grid-template-rows: auto;
+}
+
+footer {
+	grid-area: main-footer;
+	padding: 20px;
+}
+
+.wp>footer {
+	background: #363636;
+	color: #fff;
+}
+.wp>footer *,
+.wp>footer a {
+	color: #fff;
+}
+
+main>header.entry-header {
+	grid-area: entry-header;
+	padding: 10px;
+	text-align: center;
+}
+main>article.entry-content {
+	grid-area: entry-content;
+	padding: 10px;
+}
+main>footer.entry-footer {
+	grid-area: entry-footer;
+	padding: 10px;
+}
+main>aside {
+	grid-area: sidebar;
+	padding: 10px;
+	background: #363636;
+	color: #fff;
+}
+
+main>aside section,
+main>aside section * {
+	background: #fff;
+	color: #363636;
+}
+
+main>aside section {
+	display: block;
+	padding: 5px 10px 10px;
+	position: relative;
+}
+
+#logo {
+	grid-area: logo;
+}
+nav.main-nav {
+	grid-area: top-nav;
+}
+.search {
+	grid-area: search;
+	display: none;
+}
+.phone {
+	grid-area: phone;
+	align-self: start;
+	place-self: end;
+	padding: 10px;
+}
+
+#logo a,
+.phone a {
+	display: block;
+	text-align: center;
+}
+.phone a {
+	text-decoration: none;
+	font-style: normal;
+	background-color: #4d7dff;
+	color: #fff;
+	padding: 10px;
+	border-radius: 15px;
+	display: table;
+}
+.phone a:first-child {
+	margin-bottom: 12px;
+
+}
+
+.menu-toggle-wrap {
+	grid-area: menu-toggle;
+	place-self: end;
+}
+
+/**
+ * Typeograpy
+ */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat', sans-serif;
+}
+h1, h2, cite, a {
+	color: #4d7dff;
+}
+
+p {
+	margin-block-start: 0;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-top: 0;
+}
+
+a {
+	-webkit-transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
+	-moz-transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
+	-o-transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out, background 0.5s ease-in-out;
+}
+
+ul, ol {
+	/*margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;*/
+}
+
+h1, h2, h3 {
+	margin-top: 0;
+	margin-bottom: 10px;
+}
+
+main>aside h2 {
+	background-position: center center;
+	background-size: cover;
+
+	padding: 10px;
+	margin: 0 -10px 10px;
+
+	display: block;
+	
+}
+main>aside *,
+main>aside a {
+	color: #fff;
+}
+
+iframe, img {
+	max-width: 100%;
+}
+
+.main-img {
+	margin: 40px auto;
+    display: table;
+}
+
+/**
+ * HOVERS
+ */
+
+a:hover,
+a:focus,
+a:active,
+a:target {
+	color: #ffb200;
+}
+
+
+.phone a:hover,
+.phone a:focus,
+.phone a:active,
+.phone a:target {
+	background-color: #202020;
+	color: #ffb200;
+}
+/**
+ * Menu Toggle & Navigation
+ */
+.menu-toggle {	
+	-webkit-transition: color 0.5s ease-in-out;
+	-moz-transition: color 0.5s ease-in-out;
+	-o-transition: color 0.5s ease-in-out;
+	transition: color 0.5s ease-in-out;
+	font-weight: 200;
+	font-size: 1.8em;
+	border: none;
+	background: none;
+	color: #686868;
+	z-index: 100;
+	padding: 20px 20px 38px;
+	position: relative;
+}
+.menu-toggle span {
+  background: #4d7dff;
+  -webkit-transition: transform 0.25s ease-in-out, backround 0.25s ease-in-out, color 0.25s ease-in-out, letter-spacing 0.25s ease-in-out, transform 0.25s ease-in-out;
+  -moz-transition: transform 0.25s ease-in-out, backround 0.25s ease-in-out, color 0.25s ease-in-out, letter-spacing 0.25s ease-in-out, transform 0.25s ease-in-out;
+  -o-transition: transform 0.25s ease-in-out, backround 0.25s ease-in-out, color 0.25s ease-in-out, letter-spacing 0.25s ease-in-out, transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, backround 0.25s ease-in-out, color 0.25s ease-in-out, letter-spacing 0.25s ease-in-out, transform 0.25s ease-in-out;
+  display: block;
+  position: relative;
+  height: 2px;
+  width: 44px;
+  margin: 0;
+  left: 0;
+  /**/
+}
+.menu-toggle span.first {
+  top: 0px;
+}
+.menu-toggle span.second {
+  top: 9px;
+}
+.menu-toggle span.third {
+  top: 18px;
+}
+.menu-toggle span.text {
+  position: relative;
+  background: none;
+  display: none;
+  top: 0;
+  height: auto;
+  width: auto;
+}
+.menu-toggle span.text .text-rollover {
+  display: none;
+  background: none;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+
+.menu-toggle:hover, .menu-toggle:focus, .menu-toggle:active, .menu-toggle:target {
+  cursor: pointer;
+  outline: none;
+}
+.menu-toggle:hover span.text, 
+.menu-toggle:focus span.text, 
+.menu-toggle:active span.text, 
+.menu-toggle:target span.text {
+  background: none;
+}
+.menu-toggle:hover span.text .text-rollover, 
+.menu-toggle:focus span.text .text-rollover, 
+.menu-toggle:active span.text .text-rollover, 
+.menu-toggle:target span.text .text-rollover {
+  background: none;
+  color: #231120;
+  letter-spacing: 0.2em;
+  -webkit-transform: translate(-10px, 0);
+  -ms-transform: translate(-10px, 0);
+  -o-transform: translate(-10px, 0);
+  transform: translate(-10px, 0);
+}
+
+
+/**
+ * Nav menu
+ */
+.nav-menu {
+	
+	list-style-type: none;
+
+	margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 20px;
+
+    margin: 0;
+}
+
+.nav-menu li {
+	margin-bottom: 10px;
+}
+.nav-menu li a {
+	display: block;
+	padding: 10px 10px 5px;
+	text-decoration: none;
+	line-height: 1;
+}
+
+.wp>header .nav-menu li a {
+	color: #fafafa;
+	position: relative;
+}
+
+.wp>header .nav-menu li a:after {
+	content: attr(data-link-text);
+    position: relative;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #ffb200;
+    display: block;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+	-moz-transition: opacity 0.3s ease-in-out;
+	-o-transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.3s ease-in-out;
+    bottom: -6px;
+}
+
+.wp>header .nav-menu li a:hover,
+.wp>header .nav-menu li a:focus,
+.wp>header .nav-menu li a:active,
+.wp>header .nav-menu li a:target,
+.wp>header .nav-menu li.selected-menu-item a {
+	color: #ffb200;
+}
+
+.wp>header .nav-menu li a:hover:after,
+.wp>header .nav-menu li a:focus:after,
+.wp>header .nav-menu li a:active:after,
+.wp>header .nav-menu li a:target:after,
+.wp>header .nav-menu li.selected-menu-item a:after {
+	opacity: 1;
+}
+
+/**
+ * Toggled on menu
+ */
+body.toggled-on .wp>header {
+
+    position: fixed;
+    z-index: 999;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /*  */
+    background: #4d7dff;
+    bottom: 0;
+	align-content: flex-start;
+	color: #fff;
+}
+
+body.toggled-on .wp>header *,
+body.toggled-on .wp>header>* {
+	color: #fff;
+}
+body.toggled-on .wp>header .main-nav {
+	transform: translateY(0);
+	opacity: 1;
+	height: auto;
+	visibility: visible;
+	font-size: 100%;
+	padding-top: 40px;
+}
+
+body.toggled-on .wp>header .nav-menu {
+	transform: translateY(0);
+	opacity: 1;
+	max-width: 90%;
+}
+
+body.toggled-on .wp>header .nav-menu li.selected-menu-item a {
+	color: #fff;
+	background: #ffb200;
+}
+body.toggled-on .wp>header .nav-menu li.selected-menu-item a:after {
+	opacity: 0;
+}
+
+body.toggled-on .menu-toggle span {
+  background: #fff;
+}
+
+
+/**
+ * Media Queries
+ */
+@media screen and (min-width: 768px) {
+  
+  .wp {
+  	width: 98%;
+  }
+
+}
+@media screen and (min-width: 1024px) {
+ 	.wp>header {		
+		grid-template-areas: "logo top-nav phone";
+		grid-template-rows: auto;
+		padding: 0 20px 0 0;
+	}
+	.phone {
+		font-size: 1.4em;
+		place-self: center;
+	}
+	main {
+		grid-template-columns: 2fr 1fr;
+		grid-template-areas: 
+		"entry-header sidebar"
+		"entry-content sidebar"
+		"entry-footer sidebar";
+		text-align: left;
+		padding: 0 0 0 20px;
+		grid-row-gap: 0;
+		grid-template-rows: auto 1fr 1fr;
+	}
+
+	main>aside {
+		padding: 0 20px 0px;
+	}
+
+	main>aside h2 {
+		margin: 0 -20px 10px;
+		padding: 10px 20px;
+	}
+
+	main>aside section {
+		padding: 10px 20px 20px;
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.wp>header .main-nav {
+
+		transform: translateY(0);
+		opacity: 1;
+		height: auto;
+		visibility: visible;
+		font-size: 100%;
+
+	}
+
+	.wp>header .main-nav .nav-menu {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	.wp>header .main-nav .nav-menu li {
+		display: inline-block;
+	}
+}	
+/*# sourceMappingURL=style.css.map */

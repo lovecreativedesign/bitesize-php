@@ -1,0 +1,70 @@
+/**
+ * This is the central home page
+ *
+ */
+#maincontent {
+    
+    .hidden {
+
+        opacity: 0;
+        height: 0;
+        visibility: collapse;
+        @include transition(all 0.35s ease-in-out);
+    
+    }
+
+    .active {
+        opacity: 1;
+        height: auto;
+        visibility: visible;
+    }
+
+    .course-actions {
+        &.clearing {
+
+            .apply-container {
+                background: $brand_1;
+                display: block;
+                padding: 20px;
+                width: 100%;
+                text-align: center;
+
+                h3 {
+                    color: #000;
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                }
+
+                a {
+                    max-width: 300px;
+                    @include transition(color 0.35s ease-in-out, background 0.35s ease-in-out);
+
+                    padding: 1rem;
+
+                    &.apply {
+                        &:hover,
+                        &:focus,
+                        &:active,
+                        &:target {
+                            background: #000;
+                            color: #fff;
+                        }
+                    }
+                }
+
+                @media screen and (min-width: $tablet) {
+                    display: flex;
+
+                    align-items: center;
+                    justify-content: space-around;
+                    align-content: center;
+                }
+
+            }
+
+           
+
+        }
+    }
+
+}

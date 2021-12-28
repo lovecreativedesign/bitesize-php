@@ -1,0 +1,405 @@
+/**
+ * Typeography
+ */
+
+/**
+ * Butler
+
+@font-face {
+    font-family: 'Butler';
+    src: url('fonts/butler/Butler-Bold.eot');
+    src: url('fonts/butler/Butler-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/butler/Butler-Bold.woff2') format('woff2'),
+        url('fonts/butler/Butler-Bold.woff') format('woff'),
+        url('fonts/butler/Butler-Bold.ttf') format('truetype'),
+        url('fonts/butler/Butler-Bold.svg#Butler-Bold') format('svg');
+    font-weight: $bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Butler';
+    src: url('fonts/butler/Butler-Medium.eot');
+    src: url('fonts/butler/Butler-Medium.eot?#iefix') format('embedded-opentype'),
+        url('fonts/butler/Butler-Medium.woff2') format('woff2'),
+        url('fonts/butler/Butler-Medium.woff') format('woff'),
+        url('fonts/butler/Butler-Medium.ttf') format('truetype'),
+        url('fonts/butler/Butler-Medium.svg#Butler-Medium') format('svg');
+    font-weight: $medium;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Butler';
+    src: url('fonts/butler/Butler.eot');
+    src: url('fonts/butler/Butler.eot?#iefix') format('embedded-opentype'),
+        url('fonts/butler/Butler.woff2') format('woff2'),
+        url('fonts/butler/Butler.woff') format('woff'),
+        url('fonts/butler/Butler.ttf') format('truetype'),
+        url('fonts/butler/Butler.svg#Butler-Medium') format('svg');
+    font-weight: $regular;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Butler';
+    src: url('fonts/butler/Butler-Light.eot');
+    src: url('fonts/butler/Butler-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/butler/Butler-Light.woff2') format('woff2'),
+        url('fonts/butler/Butler-Light.woff') format('woff'),
+        url('fonts/butler/Butler-Light.ttf') format('truetype'),
+        url('fonts/butler/Butler-Light.svg#Butler-Medium') format('svg');
+    font-weight: $light;
+    font-style: normal;
+}
+*/
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    color: $dark_grey;
+    font-family: 'Source Sans Pro', open-sans, sans-serif;
+    font-weight: $regular;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    
+    font-weight: $bold;
+    margin-bottom: 8px;
+    color: $brand_1;
+    strong {
+        font-weight: $medium;
+    }
+}
+
+h1,h2 {
+    
+}
+h2,h3,h4,h5,h6 {
+    font-family: 'Source Sans Pro', open-sans, sans-serif;
+    font-weight: $bold;
+    line-height: 1;
+}
+h1 {
+    font-size: 4.8em;    
+    @media screen and (min-width: $width1280){
+        font-size: 5.6em;
+    }    
+}
+h2 {
+    font-size: 3em;
+    @media screen and (min-width: $width1280){
+        font-size: 4.8em;
+    }
+}
+h3 {
+    font-size: 2.8em;
+}
+h4 {    
+    font-size: 2.4em;    
+}
+h5,
+h6 {
+    font-size: 2.2em;
+}
+
+p, date {
+    font-size: 2.4em;
+    padding-bottom: 15px;
+}
+
+strong {
+    font-weight: $regular;
+}
+em {
+    font-style: italic;
+}
+
+a {
+    
+    color: $brand_1;
+    font-family: 'Source Sans Pro', open-sans, sans-serif;
+    text-decoration: none;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        color: $dark_grey;
+    }
+
+    &[href^="mailto:"],
+    &[href^="tel:"] {
+        display: inline;
+        max-width: 100%;
+        ///overflow-x: auto;
+        white-space: pre-wrap;
+        white-space: -moz-pre-wrap;
+        white-space: -pre-wrap;
+        white-space: -o-pre-wrap;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+ol,
+ul {
+    @extend %list-paddings;
+    font-size: 2.2em;
+}
+
+ol,
+ul {
+
+    ul, ol {
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+    }
+    li {
+        font-size: inherit;
+    }
+}
+
+.entry-content {
+    
+    h1, h2, h3, h4, h5, h6,
+    p, a, ol, ul {
+        max-width: $text_max_width;
+    }
+
+    ol,
+    ul {
+        font-size: 1.4rem;
+        &>li {
+            padding-bottom: 5px;
+        }
+    }
+    ul {
+        li {
+
+            ///list-style-image: url('img/icons/bullet.png');
+            list-style: disc;
+
+            li {
+
+                ///list-style-image: none;
+                list-style: circle;
+
+                &:before {
+                    /// content: "\2014";
+                   /// color: $brand_1;
+                   /// margin-right: 10px;
+                    
+                }
+            }
+        }
+        &.ticks {
+            li {
+                ///list-style-image: url('img/icons/tick.png');
+            }
+        }
+    }
+    ol {
+        li {
+            list-style: decimal;
+             li {
+                list-style: lower-roman;
+             }
+        }
+    }
+}
+
+.strapline-large {
+    @extend %strapline-large;
+}
+
+.strapline-medium {
+    @extend %strapline-medium;
+}
+
+
+.text-align {
+    
+    &.left,
+    &.left * {
+        text-align: left;
+        .underline-border {
+            margin: 10px 0;
+        }
+    }
+    &.center,
+    &.center * {
+        text-align: center;
+        ///margin: 0 auto;
+        .underline-border {
+            margin: 10px auto;
+        }
+        
+    }
+    &.right,
+    &.right *{
+        text-align: right;
+        .underline-border {
+            margin: 10px 0 10px auto;
+        }
+    }
+}
+
+.wpb_text_column {
+    &.center,
+    &.center * {
+        margin: 0 auto;      
+    }
+}
+
+.align {
+    
+    * {
+        margin: 0 auto;
+    }
+
+    &.left {
+        margin: 0;
+        text-align: left;
+        .underline-border {
+            margin: 10px 0;
+        }
+    }
+    &.center {
+        margin: 0 auto;
+        text-align: center;
+        .underline-border {
+            margin: 10px auto;
+        }
+    }
+    &.right {
+        margin: 0 0 0 auto;
+        text-align: right;
+        .underline-border {
+            margin: 10px 0 10px auto;
+        }
+    }
+
+}
+
+hr {
+    border: none;
+}
+
+blockquote, q {
+    font-weight: $medium;
+    font-size: 1em;
+    line-height: 1;
+    quotes: "\201C""\201D""\2018""\2019";
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.2;
+    
+    p {
+        margin: 0 auto;
+    }
+}
+
+blockquote:before {
+    content: open-quote;
+    font-size: 6em;
+    line-height: 0.1em;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "helvetica neue";
+    margin: 40px 0 0;  
+}
+
+blockquote:after {
+    content: close-quote;
+    visiblity: hidden;
+    font-size: 0px;
+    @include opacity(0);
+}
+
+cite, pre {
+    font-size: 2.2em;
+}
+
+cite  {
+   text-transform: uppercase; 
+}
+
+
+pre {
+    display: block;
+    max-width: 100%;
+    font-family: monospace;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
+
+.white-text,
+.white-text a,
+.white-text>* {
+    color: $white;
+}
+
+
+/// Underlined text
+.underline-border {
+    display: table;
+    clear: both;
+    width: 84px;
+    margin: 10px 2px;
+    border-width: 0 0 2px;
+    border-style: solid;
+    height: 2px;
+}
+
+.page-title {
+    .underline-border {
+        margin: 10px auto;
+    }
+    
+}
+
+
+.underline {
+
+    margin: 20px 0;
+
+    h1,h2,h3,h4,h5,h6 {
+        text-align: center;
+        display: table;
+        margin: 0 auto;
+        max-width: none;
+    }
+    
+    .align {
+
+        &.left {
+            .underline-border {
+                margin: 10px 0 0 0;
+            }
+        }
+        &.center {
+            .underline-border {
+                margin: 10px auto;
+            }
+        }
+        &.right {
+            .underline-border {
+                margin: 10px 0 10px auto;
+            }
+        }
+    }
+}
+
+.read-more-link {
+
+    @extend %read-more;
+}

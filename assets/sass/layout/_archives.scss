@@ -1,0 +1,71 @@
+/**
+ * Archive Layouts
+ */
+body {
+	
+	&.archive {
+
+		#main-content {			
+
+			&>main {
+				.entry-content {
+
+					///@extend %vc-spacing;
+					///margin: 20px 0;
+
+					display: grid;
+
+					grid-template-rows:auto;
+					grid-template-columns: 1fr;
+
+					grid-row-gap: 0;
+					grid-column-gap: 0;
+
+					///justify-content: flex-start;
+					///align-items: stretch;
+					///justify-items: flex-start;
+					
+					@media screen and (min-width: $tablet){
+						grid-template-columns: 1fr 1fr;
+					}
+
+					@media screen and (min-width: $desktop){
+						///grid-template-columns: 1fr 1fr 1fr;
+					}
+
+					h3 {
+
+					}
+					blockquote {
+						
+					}
+
+					cite {
+						
+					}
+				}
+			}
+		}
+
+		&.post-type-archive-resources,
+		&.post-type-archive-courses {
+
+			#main-content {			
+
+				&>main {
+					.entry-content {
+
+						@media screen and (min-width: $desktop){
+							grid-template-columns: 1fr 1fr 1fr;
+						}
+
+					}
+
+				}
+
+			}
+		}
+
+	}
+
+}

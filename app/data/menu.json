@@ -1,0 +1,81 @@
+{
+  "primary_menu": [
+    {
+      "name": "Home",
+      "link": "/",
+      "target": "_self",
+      "alt_text": "Links to the Alexa Home Support Portsmouth, opens in same window",
+      "children": []      
+    },
+    {
+      "name": "About",
+      "link": "/about",
+      "target": "_self",
+      "alt_text": "Links to the about page for BiteSize PHP, opens in same window",
+      "children": [{
+        "name": "Getting Started",
+        "link": "/about/get-started",
+        "target": "_self",
+        "alt_text": "Links to BiteSize Php getting started, opens in same window"
+      }]      
+    }    
+  ],
+  "secondary_menu": [
+    {
+      "name": "About",
+      "link": "/about",
+      "target": "_self",
+      "alt_text": "Links to About Southampton University, opens in same window",
+      "children": [
+        {
+          "name": "Undergraduate",
+          "link": "/undergraduate",
+          "target": "_self",
+          "alt_text": "Links to Undergraduate Courses, opens in same window"
+        },
+        {
+          "name": "Post Graduate",
+          "link": "/post-graduate",
+          "target": "_self",
+          "alt_text": "Links to Post Graduate Courses, opens in same window"
+        },
+        {
+          "name": "Post Graduate Research",
+          "link": "/post-graduate-research",
+          "target": "_self",
+          "alt_text": "Links to Post Graduate Research Courses, opens in same window"
+        }
+      ]
+    },
+    {
+      "name": "Visit",
+      "link": "/visit",
+      "target": "_self",
+      "alt_text": "Links to Visit Southampton University Page, opens in same window"
+    },
+    {
+      "name": "Alumni",
+      "link": "/alumni",
+      "target": "_self",
+      "alt_text": "Links to the Alumni Page, opens in same window"
+    },
+    {
+      "name": "News",
+      "link": "/news",
+      "target": "_self",
+      "alt_text": "Links to latest news at Southampton University, opens in same window"
+    },
+    {
+      "name": "Events",
+      "link": "/events",
+      "target": "_self",
+      "alt_text": "Links to latest events at Southampton University, opens in same window"
+    },
+    {
+      "name": "Contact",
+      "link": "/contact",
+      "target": "_self",
+      "alt_text": "Links to Contact page at Southampton University, opens in same window"
+    }
+  ]
+}

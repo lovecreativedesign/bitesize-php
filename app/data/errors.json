@@ -1,0 +1,16 @@
+{
+  "errors": {
+    "404": {
+      "title": "Error Page Not Found",
+      "content": {
+        "meta_data" : {
+          "title" : "Error Page Not Found",
+          "description" : "Error Page Not Found"
+        },
+        "search_string": "Welcome to Alexa Home Support and Call Out Service. We are a small family run company who have been working with Computers for over 25 years. The rise in artifical intelligence devices and services such as Amazon Alexa, Google 's Assistant and Apple's Siri is helping millions of people become more productive in their work and homes. By having a device that can add calendar events, create reminders, answer questions, lay the radio from anywhere in the world, tell you the weather or traffic, control home appliances, contact family and fiends and much more by simply speaking commands, they are also helping people with mobility and memory challenges mange their lives more easily and stay in contact.  Alexa can also be used as an intercom (if you have more than one device). We understand that new technology can be confusing and therefor we are able to offer our services to those that may need help in setting their devices up.",
+        "html": "<p>Error Page Not Found</p>"
+      },
+      "page_template": "404"      
+    }
+  }
+}
